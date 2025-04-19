@@ -3,13 +3,235 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome Page</title>
-    <link rel="stylesheet" href="style.css"> <!-- Linking CSS -->
+    <title>Blog Post Viewer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1 id="welcome-text">Welcome</h1>
-    <button onclick="changeText()">Click Me</button>
-    
-    <script src="script.js"></script> <!-- Linking JS -->
+    <div class="container">
+        <div class="header">
+            <h1>Blog Post Viewer</h1>
+            <p>Click on a post title below to view the full article</p>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search posts..." />
+            <i class="fas fa-search search-icon"></i>
+        </div>
+
+        
+        <div class="scroll-wrapper">   
+            <div class="post-buttons" id="postButtons">
+              <button class="post-btn" data-post-id="1">
+                <span class="title">AI and the Future of Work: What to Expect in 2030</span>   
+              </button>
+          
+              <button class="post-btn" data-post-id="2">
+                <span class="title">Minimalist Design Principles for Modern Apps</span>
+              </button>
+          
+              <button class="post-btn" data-post-id="3">
+                <span class="title">Remote Work Strategies for Tech Companies</span>
+              </button>
+          
+              <button class="post-btn" data-post-id="4">
+                <span class="title">Ethical Considerations in AI Development</span>
+              </button>
+          
+              <button class="post-btn" data-post-id="5">
+                <span class="title">Content Strategies That Convert in 2025</span>
+              </button>
+            </div>
+          </div>          
+
+        <div class="blog-post" id="post1">
+            <img src="../Blog-Website/Images/future.png" alt="AI Technology" class="card-image">
+            <div class="card-content">
+                <div class="card-meta">
+                    <span>March 28, 2025</span>
+                    <span class="card-category">Technology</span>
+                </div>
+                <h2 class="card-title">AI and the Future of Work: What to Expect in 2030</h2>
+                <p class="card-excerpt">Artificial intelligence is reshaping industries at an unprecedented pace. By 2030, we can expect AI to have transformed nearly every aspect of the workplace. This article explores the key changes we anticipate, including the automation of routine tasks, the emergence of new job categories, and the evolving skills that will be most valuable in the AI-driven economy. We'll examine how companies are already preparing for these changes and what individuals can do to future-proof their careers.</p>
+                <div class="card-footer">
+                    <div class="social-share">
+                        <button class="social-btn facebook"><i class="fab fa-facebook-f"></i></button>
+                        <button class="social-btn twitter"><i class="fab fa-twitter"></i></button>
+                        <button class="social-btn linkedin"><i class="fab fa-linkedin-in"></i></button>
+                    </div>
+                    <div class="author">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Author" class="author-avatar">
+                        <span class="author-name">Mark Benson</span>
+                    </div>
+                </div>
+            </div>
+            <div class="comments-section">
+                <h3 class="comments-title">Comments (2)</h3>
+                <div class="comments-list">
+                    <div class="comment">
+                        <div class="comment-author">John Doe</div>
+                        <div class="comment-text">Great insights into how AI will transform the job market. I particularly appreciated the section on reskilling initiatives. Looking forward to more articles like this!</div>
+                    </div>
+                    <div class="comment">
+                        <div class="comment-author">Sarah Smith</div>
+                        <div class="comment-text">I'm concerned about job displacement in certain sectors. Will there be enough new jobs created to replace those lost to automation? The article touched on this but I'd love to see more detailed analysis.</div>
+                    </div>
+                </div>
+                <form class="comment-form" data-post-id="1">
+                    <textarea class="comment-input" placeholder="Add your comment..." required></textarea>
+                    <button type="submit" class="comment-submit">Post Comment</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="blog-post" id="post2">
+            <img src="../Blog-Website/Images/modern.png" alt="UI Design" class="card-image">
+            <div class="card-content">
+                <div class="card-meta">
+                    <span>June 10, 2025</span>
+                    <span class="card-category">Design</span>
+                </div>
+                <h2 class="card-title">Minimalist Design Principles for Modern Apps</h2>
+                <p class="card-excerpt">In an era of information overload, minimalist design has emerged as a powerful tool for creating intuitive and effective user experiences. This article breaks down the core principles of minimalist design and demonstrates how they can dramatically improve user engagement and conversion rates. We'll explore real-world examples from leading apps, examine the psychology behind why minimalism works, and provide practical tips for implementing these principles in your own projects. Whether you're designing a mobile app or a web platform, these strategies will help you create cleaner, more focused interfaces that users love.</p>
+                <div class="card-footer">
+                    <div class="social-share">
+                        <button class="social-btn facebook"><i class="fab fa-facebook-f"></i></button>
+                        <button class="social-btn twitter"><i class="fab fa-twitter"></i></button>
+                        <button class="social-btn linkedin"><i class="fab fa-linkedin-in"></i></button>
+                    </div>
+                    <div class="author">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Author" class="author-avatar">
+                        <span class="author-name">Lisa Chen</span>
+                    </div>
+                </div>
+            </div>
+            <div class="comments-section">
+                <h3 class="comments-title">Comments (1)</h3>
+                <div class="comments-list">
+                    <div class="comment">
+                        <div class="comment-author">Alex Johnson</div>
+                        <div class="comment-text">Minimalism has completely changed how I approach UI design. The before-and-after case studies in this article perfectly illustrate how less can indeed be more when it comes to interface design.</div>
+                    </div>
+                </div>
+                <form class="comment-form" data-post-id="2">
+                    <textarea class="comment-input" placeholder="Add your comment..." required></textarea>
+                    <button type="submit" class="comment-submit">Post Comment</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="blog-post" id="post3">
+            <img src="../Blog-Website//Images/remote.jpeg" alt="Business" class="card-image">
+            <div class="card-content">
+                <div class="card-meta">
+                    <span>June 5, 2025</span>
+                    <span class="card-category">Business</span>
+                </div>
+                <h2 class="card-title">Remote Work Strategies for Tech Companies</h2>
+                <p class="card-excerpt">The shift to remote work is no longer temporary - it's the new normal for tech companies worldwide. This comprehensive guide examines how leading organizations are adapting their operations, culture, and management practices to thrive in a remote-first environment. We'll cover everything from asynchronous communication strategies and virtual team-building exercises to productivity measurement and cybersecurity considerations. Drawing on interviews with executives from successful remote companies, this article provides actionable insights for businesses at any stage of their remote work journey.</p>
+                <div class="card-footer">
+                    <div class="social-share">
+                        <button class="social-btn facebook"><i class="fab fa-facebook-f"></i></button>
+                        <button class="social-btn twitter"><i class="fab fa-twitter"></i></button>
+                        <button class="social-btn linkedin"><i class="fab fa-linkedin-in"></i></button>
+                    </div>
+                    <div class="author">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Author" class="author-avatar">
+                        <span class="author-name">David Kim</span>
+                    </div>
+                </div>
+            </div>
+            <div class="comments-section">
+                <h3 class="comments-title">Comments (0)</h3>
+                <div class="comments-list"></div>
+                <form class="comment-form" data-post-id="3">
+                    <textarea class="comment-input" placeholder="Add your comment..." required></textarea>
+                    <button type="submit" class="comment-submit">Post Comment</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="blog-post" id="post4">
+            <img src="../Blog-Website//Images/ethical.webp" alt="AI Ethics" class="card-image">
+            <div class="card-content">
+                <div class="card-meta">
+                    <span>May 28, 2025</span>
+                    <span class="card-category">AI</span>
+                </div>
+                <h2 class="card-title">Ethical Considerations in AI Development</h2>
+                <p class="card-excerpt">As artificial intelligence systems become more powerful and pervasive, ethical considerations must move from afterthoughts to foundational elements of the development process. This article explores the moral responsibilities of AI developers and organizations deploying AI solutions. We examine critical issues including algorithmic bias, privacy concerns, transparency requirements, and the potential for unintended consequences. Through case studies and expert interviews, we outline frameworks for ethical decision-making and showcase companies that are leading the way in responsible AI development. The article concludes with practical guidelines for implementing ethical practices in your own AI projects.</p>
+                <div class="card-footer">
+                    <div class="social-share">
+                        <button class="social-btn facebook"><i class="fab fa-facebook-f"></i></button>
+                        <button class="social-btn twitter"><i class="fab fa-twitter"></i></button>
+                        <button class="social-btn linkedin"><i class="fab fa-linkedin-in"></i></button>
+                    </div>
+                    <div class="author">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Author" class="author-avatar">
+                        <span class="author-name">Dr. Emily Chen</span>
+                    </div>
+                </div>
+            </div>
+            <div class="comments-section">
+                <h3 class="comments-title">Comments (3)</h3>
+                <div class="comments-list">
+                    <div class="comment">
+                        <div class="comment-author">Priya Patel</div>
+                        <div class="comment-text">This is such an important topic that doesn't get enough attention. The section on algorithmic bias in hiring systems was particularly eye-opening. We need more discussion about these real-world impacts.</div>
+                    </div>
+                    <div class="comment">
+                        <div class="comment-author">Mark Williams</div>
+                        <div class="comment-text">While I appreciate the focus on ethics, I'm concerned about who gets to decide what's "ethical". These decisions shouldn't be left to tech companies alone. We need more government regulation in this space.</div>
+                    </div>
+                    <div class="comment">
+                        <div class="comment-author">Samuel Rodriguez</div>
+                        <div class="comment-text">The ethical frameworks presented here provide a great starting point for teams developing AI solutions. I'll be sharing this with my product team at our next meeting.</div>
+                    </div>
+                </div>
+                <form class="comment-form" data-post-id="4">
+                    <textarea class="comment-input" placeholder="Add your comment..." required></textarea>
+                    <button type="submit" class="comment-submit">Post Comment</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="blog-post" id="post5">
+            <img src="../Blog-Website/Images/ai.jpeg" alt="Marketing" class="card-image">
+            <div class="card-content">
+                <div class="card-meta">
+                    <span>May 20, 2025</span>
+                    <span class="card-category">Marketing</span>
+                </div>
+                <h2 class="card-title">Content Strategies That Convert in 2025</h2>
+                <p class="card-excerpt">The content marketing landscape has evolved dramatically, with traditional approaches becoming less effective in today's crowded digital space. This article reveals the most powerful content strategies driving engagement and conversions in 2025. We'll explore the rise of interactive content, the importance of hyper-personalization, and the growing role of AI in content creation and distribution. Packed with data from recent campaigns and insights from top marketing executives, this guide will help you refine your content strategy to cut through the noise and deliver measurable results. Whether you're a solo entrepreneur or part of a large marketing team, these tactics will help you create content that resonates with your audience and drives business growth.</p>
+                <div class="card-footer">
+                    <div class="social-share">
+                        <button class="social-btn facebook"><i class="fab fa-facebook-f"></i></button>
+                        <button class="social-btn twitter"><i class="fab fa-twitter"></i></button>
+                        <button class="social-btn linkedin"><i class="fab fa-linkedin-in"></i></button>
+                    </div>
+                    <div class="author">
+                        <img src="https://randomuser.me/api/portraits/men/90.jpg" alt="Author" class="author-avatar">
+                        <span class="author-name">Michael Thompson</span>
+                    </div>
+                </div>
+            </div>
+            <div class="comments-section">
+                <h3 class="comments-title">Comments (1)</h3>
+                <div class="comments-list">
+                    <div class="comment">
+                        <div class="comment-author">Lisa Wong</div>
+                        <div class="comment-text">I've seen great results implementing interactive content as suggested in this article. Our quiz-based lead generation forms have a 45% higher conversion rate than traditional forms. Highly recommend trying these approaches!</div>
+                    </div>
+                </div>
+                <form class="comment-form" data-post-id="5">
+                    <textarea class="comment-input" placeholder="Add your comment..." required></textarea>
+                    <button type="submit" class="comment-submit">Post Comment</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
